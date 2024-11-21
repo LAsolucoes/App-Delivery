@@ -1,103 +1,136 @@
-const modalMeuCarrinho = document.querySelector("#modal-background")
-const btnFecharModal = document.querySelector("#btn-fechar")
-const btnVerCarrinho = document.querySelector("#ver-carrinho")
-const btnAddProduto = document.querySelector(".btn-add-produto")
-const updateItens = document.querySelector(".content-itens")
-const subtotalCarrinho = document.querySelector("#subtotal")
-const menuBars = document.querySelector("#bars")
-const menuClose = document.querySelector("#close")
-const modalMenu = document.querySelector("#modal-menu")
-const modalMenuSobre = document.querySelector("#sobre")
-const modalMenuHorario = document.querySelector("horarios")
+const modalMeuCarrinho = document.querySelector("#modal-background");
+const btnFecharModal = document.querySelector("#btn-fechar");
+const btnVerCarrinho = document.querySelector("#ver-carrinho");
+const btnAddProduto = document.querySelector(".btn-add-produto");
+const updateItens = document.querySelector(".content-itens");
+const subtotalCarrinho = document.querySelector("#subtotal");
+const menuBars = document.querySelector("#bars");
+const menuClose = document.querySelector("#close");
+const modalMenu = document.querySelector("#modal-menu");
+const modalMenuLinkSobre = document.querySelector("#link-sobre")
+const modalMenuLinkHorarios = document.querySelector("#link-horarios");
+const modalMenuLinkPagamentos = document.querySelector("#link-pagamentos");
+const modalMenuSobre = document.querySelector("#modal-menu-sobre");
+const modalMenuHorario = document.querySelector("#modal-menu-horarios");
+const modalMenuPagamentos = document.querySelector("#modal-menu-pagamentos")
 
-const linkModalHorario = document
-let carrinho = []
+
+let carrinho = [];
 
 /* Função de Abrir e fechar Modal menu Bars */
 function abrirModalDadosEstabelecimento() {
-    menuBars.style.display = "none"
-    menuClose.style.display = "flex"
-    modalMenu.style.display = "block"
-} menuBars.addEventListener("click", abrirModalDadosEstabelecimento)
+  menuBars.style.display = "none";
+  menuClose.style.display = "flex";
+  modalMenu.style.display = "block";
+  btnVerCarrinho.style.display = "none"
+}
+menuBars.addEventListener("click", abrirModalDadosEstabelecimento);
 
 function fecharModalDadosEstabelecimento() {
-    menuBars.style.display = "block"
-    menuClose.style.display = "none"
-    modalMenu.style.display = "none"
-} menuClose.addEventListener("click", fecharModalDadosEstabelecimento)
+  menuBars.style.display = "block";
+  menuClose.style.display = "none";
+  modalMenu.style.display = "none";
+   btnVerCarrinho.style.display = "block"
+}
+menuClose.addEventListener("click", fecharModalDadosEstabelecimento);
 
 function fecharModalDadosEstabelecimentoCLickFora(event) {
-    if (event.target === modalMenu) {
-        menuBars.style.display = "block"
-        menuClose.style.display = "none"
-        modalMenu.style.display = "none"
-        }
-} modalMenu.addEventListener("click", fecharModalDadosEstabelecimentoCLickFora)
+  if (event.target === modalMenu) {
+    menuBars.style.display = "block";
+    menuClose.style.display = "none";
+    modalMenu.style.display = "none";
+    btnVerCarrinho.style.display = "block"
 
-/*****************  CORRIGIR *************** */
-function dadosEstabelecimento() {
-        document.querySelector("#sobre").style.display = "none"
-    
-        document.getElementById("horarios").style.display = "block"  
-   
-    
-}document.getElementById("link-horarios").addEventListener("click" , dadosEstabelecimento)
+  }
+}
+modalMenu.addEventListener("click", fecharModalDadosEstabelecimentoCLickFora); 
+
+/*Função de Navegacao dos dados do estabelecimento */
+function dadosEstabelecimentoSobre(event) {
+  event.preventDefault();
+  modalMenuSobre.style.display = "block";
+  modalMenuPagamentos.style.display = "none"
+  modalMenuHorario.style.display = "none";
+}modalMenuLinkSobre.addEventListener("click", dadosEstabelecimentoSobre);
+
+function dadosEstabelecimentoHorarios(event) {
+  event.preventDefault();
+  modalMenuSobre.style.display = "none";
+  modalMenuPagamentos.style.display = "none"
+  modalMenuHorario.style.display = "block";
+}modalMenuLinkHorarios.addEventListener("click", dadosEstabelecimentoHorarios);
+
+function dadosEstabelecimentoPagamentos(event) {
+  event.preventDefault();
+  modalMenuSobre.style.display = "none";
+  modalMenuHorario.style.display = "none";
+  modalMenuPagamentos.style.display = "block"
+
+}modalMenuLinkPagamentos.addEventListener("click", dadosEstabelecimentoPagamentos);
+
+
 /************************************************ */
 
 /* Função Abrir e Fechar Modal do Carrinho (MEU CARRINHO) */
 function abrirModalMeuCarrinho() {
-    modalMeuCarrinho.style.display = "flex"
-} btnVerCarrinho.addEventListener("click", abrirModalMeuCarrinho)
+  modalMeuCarrinho.style.display = "flex";
+}
+btnVerCarrinho.addEventListener("click", abrirModalMeuCarrinho);
 
 function fecharModalMeuCarrinho() {
-    modalMeuCarrinho.style.display = "none"
-} btnFecharModal.addEventListener("click", fecharModalMeuCarrinho)
+  modalMeuCarrinho.style.display = "none";
+}
+btnFecharModal.addEventListener("click", fecharModalMeuCarrinho);
 
 function fecharModalMeuCarrinhoClickFora(event) {
-    if (event.target === modalMeuCarrinho) {
-        modalMeuCarrinho.style.display = "none"
-    }
-} modalMeuCarrinho.addEventListener("click", fecharModalMeuCarrinhoClickFora)
+  if (event.target === modalMeuCarrinho) {
+    modalMeuCarrinho.style.display = "none";
+  }
+}
+modalMeuCarrinho.addEventListener("click", fecharModalMeuCarrinhoClickFora);
 
 
-// 
+
+
+
+
+
+//
 
 function addPegarIntemClicado(event) {
-    const btnPaiAddProduto = event.target.closest(".btn-add-produto")
+  const btnPaiAddProduto = event.target.closest(".btn-add-produto");
 
-    if (btnPaiAddProduto) {
-        const name = btnPaiAddProduto.getAttribute("data-name")
-        const valor = parseFloat(btnPaiAddProduto.getAttribute("data-price")).toFixed(2)
-        addiItemCarrinho(name, valor)
-    }
-} document.querySelector("main").addEventListener("click", addPegarIntemClicado)
-
+  if (btnPaiAddProduto) {
+    const name = btnPaiAddProduto.getAttribute("data-name");
+    const valor = parseFloat(
+      btnPaiAddProduto.getAttribute("data-price")
+    ).toFixed(2);
+    addiItemCarrinho(name, valor);
+  }
+}
+document.querySelector("main").addEventListener("click", addPegarIntemClicado);
 
 function addiItemCarrinho(name, valor) {
-    const verificarQuantidade = carrinho.find(item => item.name === name)
-    if (verificarQuantidade) {
-        verificarQuantidade.quantidade += 1
-
-
-    } else {
-        carrinho.push({
-            name,
-            valor,
-            quantidade: 1
-        })
-    }
-    addProdutoMeuCarrinho()
+  const verificarQuantidade = carrinho.find((item) => item.name === name);
+  if (verificarQuantidade) {
+    verificarQuantidade.quantidade += 1;
+  } else {
+    carrinho.push({
+      name,
+      valor,
+      quantidade: 1,
+    });
+  }
+  addProdutoMeuCarrinho();
 }
 
-
-
 function addProdutoMeuCarrinho() {
-    updateItens.innerHTML = ""
-    total = 0
+  updateItens.innerHTML = "";
+  total = 0;
 
-    carrinho.forEach(item => {
-        const itemsCarrinho = document.createElement("div")
-        itemsCarrinho.innerHTML = `
+  carrinho.forEach((item) => {
+    const itemsCarrinho = document.createElement("div");
+    itemsCarrinho.innerHTML = `
        
        <div class=" itens-adiconado">
            <div>
@@ -110,21 +143,16 @@ function addProdutoMeuCarrinho() {
            </div>
        </div>
        <hr>
-       `
+       `;
 
-        updateItens.appendChild(itemsCarrinho)
+    updateItens.appendChild(itemsCarrinho);
 
-        total += item.quantidade * item.valor
-        subtotalCarrinho.innerHTML = "Total R$" + total.toFixed(2)
+    total += item.quantidade * item.valor;
+    subtotalCarrinho.innerHTML = "Total R$" + total.toFixed(2);
 
-        let totalItens = carrinho.length
-        if (totalItens > 0) {
-            btnVerCarrinho.querySelector("span").textContent = `( ${totalItens} )`
-        }
-
-
-
-    });
-
-
+    let totalItens = carrinho.length;
+    if (totalItens > 0) {
+      btnVerCarrinho.querySelector("span").textContent = `( ${totalItens} )`;
+    }
+  });
 }

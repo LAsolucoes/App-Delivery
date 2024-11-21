@@ -1,332 +1,545 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: white;
-
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: white;
 }
 
 header {
-    background-color: black;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    top: 0;
-    border-bottom: 1px solid gray;
+  background-color: black;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  border-bottom: 1px solid gray;
+  height: 150px; /*  */
 }
 
-header .menu-logotipo {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    width: 100%;
+header .container-menu-logotipo {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 100%;
 }
 
-header .menu i {
-    display: flex;
-    padding: 20px;
-    font-size: 1.5rem;
-    color: white;
+header .menu-bars i {
+  display: flex;
+  padding: 20px;
+  font-size: 1.5rem;
+  color: white;
 }
 
-header #close {
-    display: none;
-    padding: 20px;
-    font-size: 1.5rem;
-    color: red;
-}
-
-header .modal-menu {
-   display: none; 
-    position: fixed;
-    background-color: rgba(0, 0, 0, 0.66);
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-
-}
-
-header .modal-dados {
-    position: absolute;
-    border: 1px solid rgba(128, 128, 128, 0.477);
-    background-color: rgb(255, 255, 255);
-    max-width: 550px;
-    max-height: 700px;
-    padding: 20px;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    line-height: 2;
-    border-radius: 0px 7px 7px;
-    z-index: 99;
-
-}
-
-header .header-modal {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-header nav{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-header nav a {
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-    
-}
-
-header .horarios{
-    display: none;
-}
-header .grid-logotipo{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 5px;
+header .grid-logotipo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
 }
 
 header img {
-    width: 80px;
-    height: 80px;
-    object-fit: cover;
-    border-radius: 50%;
-
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 header img:hover {
-    scale: 1.1;
+  scale: 1.1;
 }
 
-header .descricao-restaurante {
-    color: white;
+header p.descricao-restaurante {
+  color: white;
 }
 
-header .funcionamento {
-    color: rgb(18, 239, 18);
-    padding: 5px 10px;
-    border-radius: 5px;
-    width: 200px;
-    text-align: center;
-    font-size: 1rem;
-    margin: 10px;
-    font-weight: bold;
+header p.funcionamento {
+  color: rgb(18, 239, 18);
+  text-align: center;
+  font-size: 1rem;
+  margin: 10px;
+  font-weight: bold;
+}
+
+header .modal-menu {
+  display: none;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.66);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+
+  z-index: 99;
+}
+
+header .container-modal-dados {
+  position: absolute;
+  border: 1px solid rgba(128, 128, 128, 0.477);
+  background-color: rgb(255, 255, 255);
+  width: 350px;
+  max-width: 550px;
+  height: 750px;
+  max-height: 850px;
+  padding: 20px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  line-height: 2;
+  border-radius: 7px;
+}
+
+header .title-modal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+header .title-modal h1 {
+  font-size: 1.2rem;
+}
+
+header .title-modal #close {
+  display: none;
+  font-size: 1.5rem;
+  color: red;
+}
+
+header .modal-menu-nav nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .modal-menu-nav nav a {
+  text-decoration: none;
+  color: rgb(36, 36, 36);
+  font-weight: bold;
+}
+header .modal-menu-nav hr {
+  margin-bottom: 15px;
+}
+
+header .modal-menu-dados {
+  font-size: 1.1rem;
+  font-weight: 500;
+  line-height: 2;
+  color: rgb(66, 66, 66);
+}
+
+header .modal-menu-dados .modal-menu-contatos {
+  display: flex;
+  flex-direction: column;
+}
+
+header .modal-menu-dados .modal-menu-contatos a {
+  text-decoration: none;
+  color: gray;
+}
+
+header .iframe-maps {
+  margin-top: 15px;
+}
+
+header .midias-sociais {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 1.5rem;
+}
+header .midias-sociais a {
+  color: gray;
+}
+
+header .modal-menu-dados #modal-menu-horarios {
+  display: none;
+}
+
+header .modal-menu-dados .dias-funcionamento {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.3);
+  margin-bottom: 15px;
+}
+
+header .modal-menu-dados #modal-menu-pagamentos {
+  display: none;
+}
+
+header .modal-menu-dados .metodos-pagamentos {
+  border-bottom: 1px solid rgba(128, 128, 128, 0.3);
+  margin-bottom: 15px;
 }
 
 main {
-    padding: 20px;
-    margin-top: 170px;
-    margin-bottom: 50px;
-    overflow: hidden;
-    background-color: white;
+  margin-top: 250px;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 main .container-categoria {
-    display: flex;
+  background-color: white;
+  position: fixed;
+  width: 100%;
+  top: 150px;
+  left: 0;
+  right: 0;
+}
+main .input-pesquisa {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
 }
 
-main .container-categoria a {
-    text-decoration: none;
-    padding: 5px 10px;
-    background-color: white;
-    border-radius: 10px;
-    color: gray;
-    border: 1px solid gray;
+main .input-pesquisa input {
+  max-width: 600px;
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  border: 1px solid rgba(128, 128, 128, 0.534);
 }
-
 main .categoria {
-    padding: 10px;
-    display: flex;
-    gap: 10px;
-    overflow-x: auto;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+  gap: 10px;
+  padding: 10px;
 }
 
-main .title-categoria {
-    text-align: center;
-    margin: 20px auto;
-    box-shadow: 0px 0px 14px 1px gray;
-    border-radius: 5px;
+main .categoria a {
+  text-decoration: none;
+  color: gray;
+  font-size: 1.2rem;
+  border: 1px solid gray;
+  border-radius: 10px;
+  padding: 5px 10px;
+  font-size: 1rem;
+}
 
+main .container-main {
+  max-width: 1440px;
+  width: 100%;
+  display: flex;
+  text-align: center;
+}
+
+main .container-produtos {
+  padding: 10px;
+  width: 100%;
+  margin-top: 10px;
 }
 
 main .container {
-    display: flex;
-    padding: 7px;
-    border-radius: 6px;
-    box-shadow: 0px 0px 14px 1px rgba(128, 128, 128, 0.219);
-    max-width: 500px;
-    margin-top: 20px;
-    background-color: rgb(253, 253, 253);
-    border: 1px solid rgba(128, 128, 128, 0.593)
+  display: inline-block;
+  padding: 7px;
+  border-radius: 6px;
+  box-shadow: 0px 0px 14px 1px rgba(128, 128, 128, 0.356);
+  max-width: 480px;
+  margin: 8px;
+  border: 1px solid rgba(128, 128, 128, 0.267);
+  text-align: start;
 }
 
-.content {
+main .modal-produtos {
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+main .modal-produto-selecionado {
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid gray;
+  display: flex;
+  max-width: 800px;
+  height: 600px;
+  border-radius: 10px;
+}
+
+main .modal-produtos-img{
+    padding: 10px;
     display: flex;
+    align-items: center;
+} 
+
+main .modal-produtos-img img {
+  width: 350px;
+  height: 350px;
+  object-fit: cover;
+ 
+}
+
+
+
+
+
+main .modal-produtos-descricao {
+  position: relative;
+  color: gray;
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  padding: 20px;
+  background-color: bisque;
+  width: 100vw;
+}
+
+main .modal-produtos-descricao h1{
+  font-size: 1.5rem;
+}
+
+
+main .modal-produtos-descricao .btn-alterar-qtd{
+  position: absolute;
+  bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid red;
+  align-items: center;
+  width: 90%;
+}
+
+main .modal-produtos-descricao .btn-add-remove-qtd{
+  border: 1px solid gray;
+  background-color: rgba(128, 128, 128, 0.432);
+  width: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main .modal-produtos-descricao .btn-add-remove-qtd button{
+  padding: 5px 10px;
+  background-color: transparent;
+  border: none;
+  font-size: 1rem;
+}
+
+
+main .modal-produtos-descricao .btn-alterar-qtd .btn-add {
+  padding: 8px 10px;
+  width: 250px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  display: flex;
+  gap: 50%;
+}
+
+
+
+
+
+.content {
+  display: flex;
 }
 
 .content img {
-    width: 100px;
-    height: 100%;
-    background-color: white;
-    object-fit: cover;
+  width: 100px;
+  height: 100%;
+  background-color: white;
+  object-fit: cover;
 }
 
 .content .content-descricao {
-    display: flex;
-    flex-direction: column;
-    padding: 0px 5px;
+  display: flex;
+  flex-direction: column;
+  padding: 0px 5px;
 }
 
 .content .content-descricao p.descricao {
-    margin-bottom: 5px;
-    font-weight: bold;
-
+  margin-bottom: 5px;
+  font-weight: bold;
 }
 
 .content .content-descricao .footer-content {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
 }
 
 .content .valor {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .content-descricao button {
-    padding: 6px 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: red;
-    color: white;
-    cursor: pointer;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: red;
+  color: white;
+  cursor: pointer;
 }
 
 .modal-background {
-    display: none;
-    position: fixed;
-    background-color: rgba(0, 0, 0, 0.66);
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: 99;
-
-
+  display: none;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.66);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 99;
 }
 
 .modal {
-    position: absolute;
-    border: 1px solid gray;
-    background-color: white;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 20px;
-    min-width: 350px;
-    max-height: 90vh;
-    border-radius: 7px;
-    overflow: auto;
-
+  position: absolute;
+  border: 1px solid gray;
+  background-color: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  width: 70%;
+  max-width: 1024px;
+  max-height: 90vh;
+  border-radius: 7px;
+  overflow: auto;
 }
 
 .modal h1 {
-    text-align: center;
-    font-size: 1.3rem;
-    margin-bottom: 20px;
+  text-align: center;
+  font-size: 1.3rem;
+  margin-bottom: 20px;
 }
 
 .modal .content-itens {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .modal .itens-adiconado {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .modal .itens-adiconado button {
-    padding: 5px 10px;
-    border: none;
-    color: white;
-    background-color: red;
-    border-radius: 5px;
+  padding: 5px 10px;
+  border: none;
+  color: white;
+  background-color: red;
+  border-radius: 5px;
 }
 
 .modal hr {
-    margin: 10px auto;
-
+  margin: 10px auto;
 }
 
 .modal .subtotal {
-    color: rgb(1, 88, 1);
-    font-weight: bold;
-    font-size: 1.5rem;
-    margin-bottom: 10px;
+  color: rgb(1, 88, 1);
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
 }
 
 .modal input {
-    width: 100%;
-    padding: 5px;
-    border: 1px solid gray;
-    border-radius: 5px;
-    margin-top: 5px;
+  width: 100%;
+  padding: 5px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  margin-top: 5px;
 }
 
 .modal .btn-acoes {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
 }
 
 .modal .btn-acoes button {
-    padding: 6px;
-    border: none;
-    border-radius: 5px;
+  padding: 6px;
+  border: none;
+  border-radius: 5px;
 
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .btn-fechar {
-    color: gray;
+  color: gray;
 }
 
 .btn-finalizar {
-    background-color: green;
-    color: white;
+  background-color: green;
+  color: white;
 }
 
 footer {
-    position: fixed;
-    bottom: 0;
-    background-color:black;
-    width: 100%;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
+  position: fixed;
+  bottom: 0;
+  background-color: black;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 footer button {
-    width: 100%;
-    padding: 10px;
-    background-color: transparent;
-    color: white;
-    border: none;
-    cursor: pointer;
+  width: 100%;
+  padding: 10px;
+  background-color: transparent;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* *****************768px******************* */
+
+@media (max-width: 768px) {
+  main .categoria {
+    justify-content: space-evenly;
+  }
+  main .modal {
+    width: 580px;
+    text-align: start;
+  }
+}
+/* *************425px****************** */
+@media (max-width: 425px) {
+  main .input-pesquisa input {
+    height: 35px;
+    font-size: 1rem;
+  }
+
+  main div.categoria a {
+    font-size: 0.8rem;
+  }
+
+  main div.container {
+    font-size: 0.8rem;
+    margin: 5px;
+  }
+  main div.container img {
+    width: 90px;
+  }
+
+  main .modal {
+    width: 75%;
+    text-align: start;
+  }
+}
+
+@media (max-width: 375px) {
+  main .modal {
+    font-size: 0.8rem;
+    text-align: start;
+  }
 }

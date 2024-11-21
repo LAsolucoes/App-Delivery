@@ -1,0 +1,332 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: white;
+
+}
+
+header {
+    background-color: black;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    border-bottom: 1px solid gray;
+}
+
+header .menu-logotipo {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+}
+
+header .menu i {
+    display: flex;
+    padding: 20px;
+    font-size: 1.5rem;
+    color: white;
+}
+
+header #close {
+    display: none;
+    padding: 20px;
+    font-size: 1.5rem;
+    color: red;
+}
+
+header .modal-menu {
+   display: none; 
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.66);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+
+}
+
+header .modal-dados {
+    position: absolute;
+    border: 1px solid rgba(128, 128, 128, 0.477);
+    background-color: rgb(255, 255, 255);
+    max-width: 550px;
+    max-height: 700px;
+    padding: 20px;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 2;
+    border-radius: 0px 7px 7px;
+    z-index: 99;
+
+}
+
+header .header-modal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    
+}
+
+header .horarios{
+    display: none;
+}
+header .grid-logotipo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+
+header img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+
+}
+
+header img:hover {
+    scale: 1.1;
+}
+
+header .descricao-restaurante {
+    color: white;
+}
+
+header .funcionamento {
+    color: rgb(18, 239, 18);
+    padding: 5px 10px;
+    border-radius: 5px;
+    width: 200px;
+    text-align: center;
+    font-size: 1rem;
+    margin: 10px;
+    font-weight: bold;
+}
+
+main {
+    padding: 20px;
+    margin-top: 170px;
+    margin-bottom: 50px;
+    overflow: hidden;
+    background-color: white;
+}
+
+main .container-categoria {
+    display: flex;
+}
+
+main .container-categoria a {
+    text-decoration: none;
+    padding: 5px 10px;
+    background-color: white;
+    border-radius: 10px;
+    color: gray;
+    border: 1px solid gray;
+}
+
+main .categoria {
+    padding: 10px;
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+}
+
+main .title-categoria {
+    text-align: center;
+    margin: 20px auto;
+    box-shadow: 0px 0px 14px 1px gray;
+    border-radius: 5px;
+
+}
+
+main .container {
+    display: flex;
+    padding: 7px;
+    border-radius: 6px;
+    box-shadow: 0px 0px 14px 1px rgba(128, 128, 128, 0.219);
+    max-width: 500px;
+    margin-top: 20px;
+    background-color: rgb(253, 253, 253);
+    border: 1px solid rgba(128, 128, 128, 0.593)
+}
+
+.content {
+    display: flex;
+}
+
+.content img {
+    width: 100px;
+    height: 100%;
+    background-color: white;
+    object-fit: cover;
+}
+
+.content .content-descricao {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 5px;
+}
+
+.content .content-descricao p.descricao {
+    margin-bottom: 5px;
+    font-weight: bold;
+
+}
+
+.content .content-descricao .footer-content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.content .valor {
+    font-weight: bold;
+}
+
+.content-descricao button {
+    padding: 6px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+}
+
+.modal-background {
+    display: none;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.66);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99;
+
+
+}
+
+.modal {
+    position: absolute;
+    border: 1px solid gray;
+    background-color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    min-width: 350px;
+    max-height: 90vh;
+    border-radius: 7px;
+    overflow: auto;
+
+}
+
+.modal h1 {
+    text-align: center;
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+}
+
+.modal .content-itens {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal .itens-adiconado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal .itens-adiconado button {
+    padding: 5px 10px;
+    border: none;
+    color: white;
+    background-color: red;
+    border-radius: 5px;
+}
+
+.modal hr {
+    margin: 10px auto;
+
+}
+
+.modal .subtotal {
+    color: rgb(1, 88, 1);
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.modal input {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+.modal .btn-acoes {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.modal .btn-acoes button {
+    padding: 6px;
+    border: none;
+    border-radius: 5px;
+
+    cursor: pointer;
+}
+
+.btn-fechar {
+    color: gray;
+}
+
+.btn-finalizar {
+    background-color: green;
+    color: white;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    background-color:black;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+footer button {
+    width: 100%;
+    padding: 10px;
+    background-color: transparent;
+    color: white;
+    border: none;
+    cursor: pointer;
+}

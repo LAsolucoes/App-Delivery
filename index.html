@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+    <header>
+        <div class="menu-logotipo">
+            <div class="menu" id="menu">
+                <i class="fa-solid fa-bars" id="bars"></i>
+
+            </div>
+            <div class="grid-logotipo">
+                <img src="logo.jpg" alt="">
+            </div>
+        </div>
+
+        <!-- modal bars -->
+        <div class="modal-menu" id="modal-menu">
+            <div class="modal-dados">
+                <div class="header-modal">
+                    <p><strong>Dados do Estabelecimento:</strong></p>
+                    <i class="fa-solid fa-close" id="close"></i>
+                </div>
+                <div>
+                    <nav>
+                        <a href="">SOBRE</a>
+                        <a href="" id="link-horarios">HORÁRIOS</a>
+                        <a href="">PAGAMENTOS</a>
+                    </nav>
+                </div>
+                <hr>
+
+
+
+                <div id="sobre" >
+                    <p>Rua do estabelecimento aqui! N° 77</p>
+                    <p>Bairro: Seu Bairro Aqui!</p>
+                    <p>CEP: 03908-250</p>
+                    <p>Contato: (11)94001-6064</p>
+                    <p>Telefone: (11)4001-6064</p>
+                    <div>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.5996363953686!2d-46.508539!3d-23.582818500000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce6782e3dc95df%3A0x916300ba7bc9b7ff!2sR.%20Maria%20Laura%20Figueiredo%20-%20Jardim%20Novo%20Carrao%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2003908-250!5e0!3m2!1spt-PT!2sbr!4v1732039159845!5m2!1spt-PT!2sbr"
+                            width="300" height="300" style="border:1px solid gray; border-radius: 5px;"
+                            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+
+                <div class="horarios" id="horarios">
+                    <p>Segunda 12:00 as 23:00</p>
+                    <p>Terça 12:00 as 23:00</p>
+                    <p>Quarta 12:00 as 23:00</p>
+                    <p>Quinta 12:00 as 23:00</p>
+                    <p>Sexta 12:00 as 23:00</p>
+                    <p>Sabado 12:00 as 23:00</p>
+                    <p>Domingo 12:00 as 23:00</p>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <p class="descricao-restaurante" id="descricao-restaurante">Seja bem vindo ao Nosso Delivery</p>
+        </div>
+        <div>
+            <p class="funcionamento" id="funcionamento"> Aberto até 23:00</p>
+        </div>
+    </header>
+    <main>
+        <div class="container-categoria">
+            <div class="categoria">
+                <a href="">Hamburguer</a>
+                <a href="#refrigerantes">Bebidas</a>
+                <a href="">Sobremesas</a>
+                <a href="">Hamburguer</a>
+                <a href="">Bebidas</a>
+                <a href="">Hamburguer</a>
+                <a href="">Bebidas</a>
+
+            </div>
+        </div>
+        <div class="container">
+            <div class="content">
+                <div>
+                    <img src="img01.png" alt="">
+                </div>
+                <div class="content-descricao">
+                    <p class="descricao">X-BURGUER</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <div class="footer-content">
+                        <p class="valor">R$ 18,00</p>
+                        <button type="button" data-name="X-BURGUER" data-price="18,00" class="btn-add-produto"><i
+                                class="fa-solid fa-cart-shopping"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="content">
+                <div>
+                    <img src="img02.png" alt="">
+                </div>
+
+                <div class="content-descricao">
+                    <p class="descricao">X-TUDO</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <div class="footer-content">
+                        <p class="valor">R$ 35,00</p>
+                        <button type="button" data-name="X-TUDO" data-price="35,00" class="btn-add-produto"><i
+                                class="fa-solid fa-cart-shopping"></i></button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="container">
+            <div class="content">
+                <div>
+                    <img src="img03.png" alt="">
+                </div>
+                <div class="content-descricao">
+                    <p class="descricao">X-BACON</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <div class="footer-content">
+                        <p class="valor">R$ 32,00</p>
+                        <button type="button" data-name="X-BACON" data-price="32,00" class="btn-add-produto"><i
+                                class="fa-solid fa-cart-shopping"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="content">
+                <div>
+                    <img src="img04.png" alt="">
+                </div>
+                <div class="content-descricao">
+                    <p class="descricao">X-EGG</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <div class="footer-content">
+                        <p class="valor">R$ 29,00</p>
+                        <button type="button" data-name="X-EGG" data-price="29,00" class="btn-add-produto"><i
+                                class="fa-solid fa-cart-shopping"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="content">
+                <div>
+                    <img src="img05.png" alt="">
+                </div>
+                <div class="content-descricao">
+                    <p class="descricao">X-CALABRESA</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <div class="footer-content">
+                        <p class="valor">R$ 35,00</p>
+                        <button type="button" data-name="X-CALABRESA" data-price="35,00" class="btn-add-produto"><i
+                                class="fa-solid fa-cart-shopping"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="content">
+                <div>
+                    <img src="COCA-COLA 350ML.png" alt="">
+                </div>
+                <div class="content-descricao">
+                    <p class="descricao">Coca Cola 350ml</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <div class="footer-content">
+                        <p class="valor">R$ 5,00</p>
+                        <button type="button" data-name="Coca Cola 350ml" data-price="5,00" class="btn-add-produto"><i
+                                class="fa-solid fa-cart-shopping"></i></button>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="container">
+            <div class="content">
+                <div>
+                    <img src="COCA-COLA-ZERO 350ml.png" alt="">
+                </div>
+                <div class="content-descricao">
+                    <p class="descricao">Coca Cola zero 350ml</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <div class="footer-content">
+                        <p class="valor">R$ 5,00</p>
+                        <button type="button" data-name="Coca Cola Zero 350ml" data-price="5,00"
+                            class="btn-add-produto"><i class="fa-solid fa-cart-shopping"></i></button>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="container">
+            <div class="content">
+                <div>
+                    <img src="SPRITE-350ml.png" alt="">
+                </div>
+                <div class="content-descricao">
+                    <p class="descricao">Sprite 350ml</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <div class="footer-content">
+                        <p class="valor">R$ 4,00</p>
+                        <button type="button" data-name="Sprite 350ml" data-price="4,00" class="btn-add-produto"><i
+                                class="fa-solid fa-cart-shopping"></i></button>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="container">
+            <div class="content">
+                <div>
+                    <img src="PEPSI 350ml.png" alt="">
+                </div>
+                <div class="content-descricao">
+                    <p class="descricao">Pepsi 350ml</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <div class="footer-content">
+                        <p class="valor">R$ 4,00</p>
+                        <button type="button" data-name="Pepsi 350ml" data-price="4,00" class="btn-add-produto"><i
+                                class="fa-solid fa-cart-shopping"></i></button>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="container">
+            <div class="content">
+                <div>
+                    <img src="FANTA GUARANA 350ML.png" alt="">
+                </div>
+                <div class="content-descricao">
+                    <p class="descricao">Fanta Guaraná 350ml</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <div class="footer-content">
+                        <p class="valor">R$ 4,00</p>
+                        <button type="button" data-name="Fanta Guaraná 350ml" data-price="4,00"
+                            class="btn-add-produto"><i class="fa-solid fa-cart-shopping"></i></button>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="modal-background" id="modal-background">
+            <div class="modal">
+                <div>
+                    <h1>Meu Carrinho</h1>
+                </div>
+                <div class="content-itens">
+                    <!-- Conteudo dinamico aqui -->
+                </div>
+                <div>
+                    <p class="subtotal" id="subtotal">Total: R$ 0,00</p>
+                </div>
+                <div>
+                    <p>Endereço:</p>
+                    <input type="text" placeholder="Digite seu endereço completo...">
+                </div>
+                <div class="btn-acoes">
+                    <button type="button" class="btn-fechar" id="btn-fechar">Fechar</button>
+                    <button type="button" class="btn-finalizar" id="btn-finalizar">Finalizar Pedido</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <button id="ver-carrinho"><span>(0)</span> <i class="fa-solid fa-cart-shopping"></i> Meu Carrinho</button>
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

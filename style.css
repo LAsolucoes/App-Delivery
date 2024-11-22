@@ -65,6 +65,7 @@ header p.funcionamento {
   font-weight: bold;
 }
 
+/* INICIO MODAL BARS  */
 header .modal-menu {
   display: none;
   position: fixed;
@@ -82,7 +83,7 @@ header .container-modal-dados {
   background-color: rgb(255, 255, 255);
   width: 80%;
   max-width: 850px;
-  height:90%;
+  height: 80%;
   max-height: 850px;
   padding: 20px;
   top: 50%;
@@ -133,6 +134,7 @@ header .modal-menu-dados {
   line-height: 2;
   color: rgb(66, 66, 66);
 }
+
 header .modal-menu-dados p {
   font-size: 0.9rem;
   font-weight: 500;
@@ -156,8 +158,9 @@ header .iframe-maps {
   margin-top: 15px;
   margin-bottom: 20px;
 }
-header iframe{
-  width: 300px;
+
+header iframe {
+  width: 100%;
   height: auto;
 }
 
@@ -167,22 +170,27 @@ header .midias-sociais {
   align-items: center;
   font-size: 1.5rem;
 }
+
 header .midias-sociais-icon {
   display: flex;
   flex-direction: column;
-  justify-content:center;
+  justify-content: center;
   align-items: center;
 }
-header .midias-sociais-icon p{
+
+header .midias-sociais-icon p {
   font-size: 0.8rem;
 }
-header .midias-sociais-icon .fa-whatsapp{
+
+header .midias-sociais-icon .fa-whatsapp {
   color: green;
 }
-header .midias-sociais-icon .fa-instagram{
+
+header .midias-sociais-icon .fa-instagram {
   color: red;
 }
-header .midias-sociais-icon .fa-facebook{
+
+header .midias-sociais-icon .fa-facebook {
   color: blue;
 }
 
@@ -210,9 +218,11 @@ header .modal-menu-dados .metodos-pagamentos {
   margin-bottom: 15px;
 }
 
+/* FIM MODAL MENU BARS */
+
 main {
   margin-top: 250px;
-  margin-bottom: 50px;
+  margin-bottom: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -285,6 +295,7 @@ main .container {
   margin: 8px;
   border: 1px solid rgba(128, 128, 128, 0.267);
   text-align: start;
+
 }
 
 main .modal-produtos {
@@ -304,6 +315,7 @@ main .modal-produto-selecionado {
   transform: translate(-50%, -50%);
   border: 1px solid gray;
   display: flex;
+  width: 90%;
   max-width: 800px;
   height: 600px;
   border-radius: 10px;
@@ -316,31 +328,26 @@ main .modal-produtos-img {
 }
 
 main .modal-produtos-img img {
-  width: 350px;
-  height: 350px;
+  width: 320px;
+  height: 320px;
   object-fit: cover;
 
 }
 
-
-
-
-
 main .modal-produtos-descricao {
-  position: relative;
-  color: gray;
   display: flex;
   flex-direction: column;
   text-align: start;
   padding: 20px;
-  background-color: bisque;
-  width: 100vw;
+  color: gray;
+  padding: 20px;
 }
 
 .title-modal-produtos-add {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  
 }
 
 main .modal-produtos-descricao h1 {
@@ -348,7 +355,7 @@ main .modal-produtos-descricao h1 {
 }
 
 
-main .modal-produtos-descricao .btn-alterar-qtd {
+main .modal-produtos-descricao .btn-acoes {
   position: absolute;
   bottom: 10px;
   display: flex;
@@ -357,18 +364,17 @@ main .modal-produtos-descricao .btn-alterar-qtd {
   width: 90%;
 }
 
-main .modal-produtos-descricao .btn-add-remove-qtd {
+main .btn-add-remove-qtd {
   border: none;
-  background-color: rgba(128, 128, 128, 0.432);
+  background-color: rgba(128, 128, 128, 0.608);
   width: 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-radius: 2px;
-
 }
 
-main .modal-produtos-descricao .btn-add-remove-qtd button {
+main .btn-add-remove-qtd button {
   padding: 5px 10px;
   background-color: transparent;
   border: none;
@@ -377,7 +383,7 @@ main .modal-produtos-descricao .btn-add-remove-qtd button {
 }
 
 
-main .modal-produtos-descricao .btn-alterar-qtd .btn-add {
+main .modal-produtos-descricao .btn-acoes .btn-add {
   padding: 8px 10px;
   width: 250px;
   background-color: black;
@@ -533,49 +539,49 @@ footer {
   bottom: 0;
   background-color: black;
   width: 100%;
-  height: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  height: 70px;
 }
 
 footer button {
   width: 100%;
+  height: auto;
   padding: 10px;
   background-color: transparent;
   color: white;
   border: none;
   cursor: pointer;
+
 }
 
 /* *****************768px******************* */
 
-@media (max-width: 768px) {
-  header .container-modal-dados{
+@media (max-width: 790px) {
+  header .container-modal-dados {
     font-size: 0.8rem;
-    width: 500px;
-    height: 700px;
+    width: 90%;
+    height: 800px;
     max-height: 600px;
-  
+
   }
 
-  header .container-modal-dados p , a{
+  header .container-modal-dados p,
+  a {
     font-size: 0.9rem;
   }
 
-  header .container-modal-dados h1{
+  header .container-modal-dados h1 {
     font-size: 1rem;
   }
 
-  header iframe{
-    width: 360px;
+  header iframe {
+    width: 100%;
     height: 120px;
   }
 
-  header .midias-sociais a{
+  header .midias-sociais a {
     font-size: 1.3rem;
   }
-  
+
   main .categoria {
     justify-content: space-evenly;
   }
@@ -584,32 +590,100 @@ footer button {
     width: 580px;
     text-align: start;
   }
+  main .input-pesquisa input {
+    padding: 8px;
+    font-size: 0.9rem;
+  }
+
+  main .modal-produto-selecionado {
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+    max-height: 85%;
+    border-radius: 10px;
+    overflow: auto;
+  }
+
+  main .modal-produtos-img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  main .modal-produtos-img img {
+    width: 200px;
+    height: 200px;
+  }
+
+  main .modal-produtos-descricao {
+    width: 100%;
+  }
+
+  main .modal-produtos-descricao h1 {
+    font-size: 1rem;
+  }
+  main .modal-produtos-descricao p {
+    font-size: 0.8rem;
+  }
+  main .adicionais  {
+    font-size: 0.8rem;
+  }
+
+  main .modal-produtos-descricao textarea {
+    width: 100%;
+    height: 80px;
+
+  }
+
+  main .btn-acoes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0px 20px;
+
+
+  }
+
+  main .btn-acoes .btn-add {
+    padding: 8px;
+    width: 100%;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 2px;
+    display: flex;
+    cursor: pointer;
+    font-size: 0.7rem;
+    gap: 40px;
+  }
 }
 
 /* *************425px****************** */
 @media (max-width: 426px) {
-  header .container-modal-dados{
+  header .container-modal-dados {
     font-size: 0.8rem;
-    width: 300px;
+    width: 400px;
     height: 600px;
   }
 
-  header .container-modal-dados p , a{
+  header .container-modal-dados p,
+  a {
     font-size: 0.8rem;
   }
 
-  header .container-modal-dados h1{
+  header .container-modal-dados h1 {
     font-size: 1rem;
   }
 
-  header iframe{
-    width: 260px;
-    height: 200px;
+  header iframe {
+    width: 100%;
+    height: 150px;
   }
 
-  header .midias-sociais a{
-    font-size: 1.4rem;
+  header .midias-sociais a {
+    font-size: 1.3rem;
   }
+
   main .input-pesquisa input {
     height: 35px;
     font-size: 1rem;
@@ -632,37 +706,272 @@ footer button {
     width: 75%;
     text-align: start;
   }
+  main .input-pesquisa input {
+    padding: 8px;
+    font-size: 0.9rem;
+  }
+
+  main .modal-produto-selecionado {
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+    max-height: 85%;
+    border-radius: 10px;
+    overflow: auto;
+  }
+
+  main .modal-produtos-img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  main .modal-produtos-img img {
+    width: 200px;
+    height: 200px;
+  }
+
+  main .modal-produtos-descricao {
+    width: 100%;
+  }
+
+  main .modal-produtos-descricao h1 {
+    font-size: 1rem;
+  }
+  main .modal-produtos-descricao p {
+    font-size: 0.8rem;
+  }
+  main .adicionais  {
+    font-size: 0.8rem;
+  }
+
+  main .modal-produtos-descricao textarea {
+    width: 100%;
+    height: 80px;
+
+  }
+
+  main .btn-acoes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0px 20px;
+
+
+  }
+
+  main .btn-acoes .btn-add {
+    padding: 8px;
+    width: 100%;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 2px;
+    display: flex;
+    cursor: pointer;
+    font-size: 0.7rem;
+    gap: 40px;
+  }
 }
 
-@media (max-width: 375px) {
+/* *******************375px*********************** */
+
+@media (max-width: 410px) {
   main .modal {
     font-size: 0.8rem;
     text-align: start;
   }
+
+  header .container-modal-dados {
+    font-size: 0.8rem;
+    width: 340px;
+    height: 590px;
+  }
+
+  header .container-modal-dados p,
+  a {
+    font-size: 0.8rem;
+  }
+
+  header .container-modal-dados h1 {
+    font-size: 1rem;
+  }
+
+  header .container-modal-dados .modal-menu-nav a {
+    font-size: 0.7rem;
+  }
+
+  header iframe {
+    width: 100%;
+    height: 150px;
+  }
+
+  header .midias-sociais a {
+    font-size: 1.2rem;
+  }
+  main .input-pesquisa input {
+    padding: 8px;
+    font-size: 0.9rem;
+  }
+
+  main .modal-produto-selecionado {
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+    max-height: 85%;
+    border-radius: 10px;
+    overflow: auto;
+  }
+
+  main .modal-produtos-img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  main .modal-produtos-img img {
+    width: 200px;
+    height: 200px;
+  }
+
+  main .modal-produtos-descricao {
+    width: 100%;
+  }
+
+  main .modal-produtos-descricao h1 {
+    font-size: 1rem;
+  }
+  main .modal-produtos-descricao p {
+    font-size: 0.8rem;
+  }
+  main .adicionais  {
+    font-size: 0.8rem;
+  }
+
+  main .modal-produtos-descricao textarea {
+    width: 100%;
+    height: 80px;
+
+  }
+
+  main .btn-acoes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0px 20px;
+
+
+  }
+
+  main .btn-acoes .btn-add {
+    padding: 8px;
+    width: 100%;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 2px;
+    display: flex;
+    cursor: pointer;
+    font-size: 0.7rem;
+    gap: 40px;
+  }
 }
 
-@media (max-width: 320px) {
-  header .container-modal-dados{
+/* ******************320px*********************** */
+@media (max-width: 340px) {
+  header .container-modal-dados {
     font-size: 0.8rem;
     width: 300px;
     height: 600px;
   }
 
-  header .container-modal-dados p , a{
+  header .container-modal-dados p,
+  a {
     font-size: 0.8rem;
   }
 
-  header .container-modal-dados h1{
-    font-size: 1rem;
+  header .container-modal-dados h1 {
+    font-size: 0.9rem;
   }
 
-  header iframe{
-    width: 250px;
+  header .container-modal-dados .modal-menu-nav a {
+    font-size: 0.7rem;
+  }
+
+  header iframe {
+    width: 100%;
+    height: 150px;
+  }
+
+  header .midias-sociais a {
+    font-size: 1.3rem;
+  }
+
+  main .input-pesquisa input {
+    padding: 8px;
+    font-size: 0.9rem;
+  }
+
+  main .modal-produto-selecionado {
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+    max-height: 85%;
+    border-radius: 10px;
+    overflow: auto;
+  }
+
+  main .modal-produtos-img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  main .modal-produtos-img img {
+    width: 200px;
     height: 200px;
   }
 
-  header .midias-sociais a{
-    font-size: 1.4rem;
+  main .modal-produtos-descricao {
+    width: 100%;
   }
-  
+
+  main .modal-produtos-descricao h1 {
+    font-size: 1rem;
+  }
+  main .modal-produtos-descricao p {
+    font-size: 0.8rem;
+  }
+  main .adicionais  {
+    font-size: 0.8rem;
+  }
+
+  main .modal-produtos-descricao textarea {
+    width: 100%;
+    height: 80px;
+
+  }
+
+  main .btn-acoes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0px 20px;
+
+
+  }
+
+  main .btn-acoes .btn-add {
+    padding: 8px;
+    width: 100%;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 2px;
+    display: flex;
+    cursor: pointer;
+    font-size: 0.7rem;
+    gap: 40px;
+  }
+
 }

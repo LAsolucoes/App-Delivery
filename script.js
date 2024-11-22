@@ -182,6 +182,7 @@ function addProdutoMeuCarrinho() {
 /* Fechar e abrir modal dos produtos selecionados */
 function abrir() {
   modalProdutosSelecionado.style.display = "block"
+  rodape.style.display = "none"
 
 } document.querySelector(".container").addEventListener("click", abrir)
 

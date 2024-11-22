@@ -19,7 +19,7 @@ header {
   position: fixed;
   top: 0;
   border-bottom: 1px solid gray;
-  height: 150px; /*  */
+  height: 150px;
 }
 
 header .container-menu-logotipo {
@@ -73,7 +73,6 @@ header .modal-menu {
   height: 100%;
   top: 0;
   left: 0;
-
   z-index: 99;
 }
 
@@ -81,9 +80,9 @@ header .container-modal-dados {
   position: absolute;
   border: 1px solid rgba(128, 128, 128, 0.477);
   background-color: rgb(255, 255, 255);
-  width: 350px;
-  max-width: 550px;
-  height: 750px;
+  width: 80%;
+  max-width: 850px;
+  height:90%;
   max-height: 850px;
   padding: 20px;
   top: 50%;
@@ -97,10 +96,12 @@ header .title-modal {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+
 }
+
 header .title-modal h1 {
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 header .title-modal #close {
@@ -119,13 +120,21 @@ header .modal-menu-nav nav a {
   text-decoration: none;
   color: rgb(36, 36, 36);
   font-weight: bold;
+  font-size: 0.8rem;
 }
+
 header .modal-menu-nav hr {
   margin-bottom: 15px;
 }
 
 header .modal-menu-dados {
-  font-size: 1.1rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  line-height: 2;
+  color: rgb(66, 66, 66);
+}
+header .modal-menu-dados p {
+  font-size: 0.9rem;
   font-weight: 500;
   line-height: 2;
   color: rgb(66, 66, 66);
@@ -136,13 +145,20 @@ header .modal-menu-dados .modal-menu-contatos {
   flex-direction: column;
 }
 
+
 header .modal-menu-dados .modal-menu-contatos a {
   text-decoration: none;
   color: gray;
+  font-size: 0.9rem;
 }
 
 header .iframe-maps {
   margin-top: 15px;
+  margin-bottom: 20px;
+}
+header iframe{
+  width: 300px;
+  height: auto;
 }
 
 header .midias-sociais {
@@ -151,6 +167,25 @@ header .midias-sociais {
   align-items: center;
   font-size: 1.5rem;
 }
+header .midias-sociais-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center;
+}
+header .midias-sociais-icon p{
+  font-size: 0.8rem;
+}
+header .midias-sociais-icon .fa-whatsapp{
+  color: green;
+}
+header .midias-sociais-icon .fa-instagram{
+  color: red;
+}
+header .midias-sociais-icon .fa-facebook{
+  color: blue;
+}
+
 header .midias-sociais a {
   color: gray;
 }
@@ -191,6 +226,7 @@ main .container-categoria {
   left: 0;
   right: 0;
 }
+
 main .input-pesquisa {
   display: flex;
   justify-content: center;
@@ -206,6 +242,7 @@ main .input-pesquisa input {
   font-size: 1.1rem;
   border: 1px solid rgba(128, 128, 128, 0.534);
 }
+
 main .categoria {
   background-color: white;
   display: flex;
@@ -272,17 +309,17 @@ main .modal-produto-selecionado {
   border-radius: 10px;
 }
 
-main .modal-produtos-img{
-    padding: 10px;
-    display: flex;
-    align-items: center;
-} 
+main .modal-produtos-img {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
 
 main .modal-produtos-img img {
   width: 350px;
   height: 350px;
   object-fit: cover;
- 
+
 }
 
 
@@ -300,17 +337,18 @@ main .modal-produtos-descricao {
   width: 100vw;
 }
 
-.title-modal-produtos-add{
+.title-modal-produtos-add {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-main .modal-produtos-descricao h1{
+
+main .modal-produtos-descricao h1 {
   font-size: 1.5rem;
 }
 
 
-main .modal-produtos-descricao .btn-alterar-qtd{
+main .modal-produtos-descricao .btn-alterar-qtd {
   position: absolute;
   bottom: 10px;
   display: flex;
@@ -319,7 +357,7 @@ main .modal-produtos-descricao .btn-alterar-qtd{
   width: 90%;
 }
 
-main .modal-produtos-descricao .btn-add-remove-qtd{
+main .modal-produtos-descricao .btn-add-remove-qtd {
   border: none;
   background-color: rgba(128, 128, 128, 0.432);
   width: 100px;
@@ -327,10 +365,10 @@ main .modal-produtos-descricao .btn-add-remove-qtd{
   justify-content: space-between;
   align-items: center;
   border-radius: 2px;
- 
+
 }
 
-main .modal-produtos-descricao .btn-add-remove-qtd button{
+main .modal-produtos-descricao .btn-add-remove-qtd button {
   padding: 5px 10px;
   background-color: transparent;
   border: none;
@@ -417,6 +455,7 @@ main .modal-produtos-descricao .btn-alterar-qtd .btn-add {
   padding: 20px;
   width: 70%;
   max-width: 1024px;
+  height: 70%;
   max-height: 90vh;
   border-radius: 7px;
   overflow: auto;
@@ -512,16 +551,65 @@ footer button {
 /* *****************768px******************* */
 
 @media (max-width: 768px) {
+  header .container-modal-dados{
+    font-size: 0.8rem;
+    width: 500px;
+    height: 700px;
+    max-height: 600px;
+  
+  }
+
+  header .container-modal-dados p , a{
+    font-size: 0.9rem;
+  }
+
+  header .container-modal-dados h1{
+    font-size: 1rem;
+  }
+
+  header iframe{
+    width: 360px;
+    height: 120px;
+  }
+
+  header .midias-sociais a{
+    font-size: 1.3rem;
+  }
+  
   main .categoria {
     justify-content: space-evenly;
   }
+
   main .modal {
     width: 580px;
     text-align: start;
   }
 }
+
 /* *************425px****************** */
-@media (max-width: 425px) {
+@media (max-width: 426px) {
+  header .container-modal-dados{
+    font-size: 0.8rem;
+    width: 300px;
+    height: 600px;
+  }
+
+  header .container-modal-dados p , a{
+    font-size: 0.8rem;
+  }
+
+  header .container-modal-dados h1{
+    font-size: 1rem;
+  }
+
+  header iframe{
+    width: 260px;
+    height: 200px;
+  }
+
+  header .midias-sociais a{
+    font-size: 1.4rem;
+  }
   main .input-pesquisa input {
     height: 35px;
     font-size: 1rem;
@@ -535,6 +623,7 @@ footer button {
     font-size: 0.8rem;
     margin: 5px;
   }
+
   main div.container img {
     width: 90px;
   }
@@ -550,4 +639,30 @@ footer button {
     font-size: 0.8rem;
     text-align: start;
   }
+}
+
+@media (max-width: 320px) {
+  header .container-modal-dados{
+    font-size: 0.8rem;
+    width: 300px;
+    height: 600px;
+  }
+
+  header .container-modal-dados p , a{
+    font-size: 0.8rem;
+  }
+
+  header .container-modal-dados h1{
+    font-size: 1rem;
+  }
+
+  header iframe{
+    width: 250px;
+    height: 200px;
+  }
+
+  header .midias-sociais a{
+    font-size: 1.4rem;
+  }
+  
 }

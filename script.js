@@ -13,6 +13,8 @@ const modalMenuLinkPagamentos = document.querySelector("#link-pagamentos");
 const modalMenuSobre = document.querySelector("#modal-menu-sobre");
 const modalMenuHorario = document.querySelector("#modal-menu-horarios");
 const modalMenuPagamentos = document.querySelector("#modal-menu-pagamentos")
+const containerCategorias = document.querySelector(".container-categoria")
+const rodape = document.querySelector("footer")
 
 
 
@@ -22,6 +24,7 @@ const modalProdutosSelecionado = document.querySelector("#modal-produtos")
 const modalCloseProdutos = document.querySelector("#modal-close-produtos")
 const produtoSelecionado = document.querySelector(".container")
 
+
 let carrinho = [];
 
 /* Função de Abrir e fechar Modal menu Bars */
@@ -30,6 +33,8 @@ function abrirModalDadosEstabelecimento() {
   menuClose.style.display = "flex";
   modalMenu.style.display = "block";
   btnVerCarrinho.style.display = "none"
+  containerCategorias.style.display = "none"
+  rodape.style.display = "none"
 }
 menuBars.addEventListener("click", abrirModalDadosEstabelecimento);
 
@@ -37,7 +42,9 @@ function fecharModalDadosEstabelecimento() {
   menuBars.style.display = "block";
   menuClose.style.display = "none";
   modalMenu.style.display = "none";
-   btnVerCarrinho.style.display = "block"
+  btnVerCarrinho.style.display = "block"
+  containerCategorias.style.display = "block"
+  rodape.style.display = "block"
 }
 menuClose.addEventListener("click", fecharModalDadosEstabelecimento);
 
@@ -47,10 +54,12 @@ function fecharModalDadosEstabelecimentoCLickFora(event) {
     menuClose.style.display = "none";
     modalMenu.style.display = "none";
     btnVerCarrinho.style.display = "block"
+    containerCategorias.style.display = "block"
+    rodape.style.display = "block"
 
   }
 }
-modalMenu.addEventListener("click", fecharModalDadosEstabelecimentoCLickFora); 
+modalMenu.addEventListener("click", fecharModalDadosEstabelecimentoCLickFora);
 
 /*Função de Navegacao dos dados do estabelecimento */
 function dadosEstabelecimentoSobre(event) {
@@ -58,14 +67,14 @@ function dadosEstabelecimentoSobre(event) {
   modalMenuSobre.style.display = "block";
   modalMenuPagamentos.style.display = "none"
   modalMenuHorario.style.display = "none";
-}modalMenuLinkSobre.addEventListener("click", dadosEstabelecimentoSobre);
+} modalMenuLinkSobre.addEventListener("click", dadosEstabelecimentoSobre);
 
 function dadosEstabelecimentoHorarios(event) {
   event.preventDefault();
   modalMenuSobre.style.display = "none";
   modalMenuPagamentos.style.display = "none"
   modalMenuHorario.style.display = "block";
-}modalMenuLinkHorarios.addEventListener("click", dadosEstabelecimentoHorarios);
+} modalMenuLinkHorarios.addEventListener("click", dadosEstabelecimentoHorarios);
 
 function dadosEstabelecimentoPagamentos(event) {
   event.preventDefault();
@@ -73,7 +82,7 @@ function dadosEstabelecimentoPagamentos(event) {
   modalMenuHorario.style.display = "none";
   modalMenuPagamentos.style.display = "block"
 
-}modalMenuLinkPagamentos.addEventListener("click", dadosEstabelecimentoPagamentos);
+} modalMenuLinkPagamentos.addEventListener("click", dadosEstabelecimentoPagamentos);
 
 
 /************************************************ */
@@ -111,7 +120,7 @@ function addPegarIntemClicado(event) {
     const name = btnPaiAddProduto.getAttribute("data-name");
     const valor = parseFloat(
       btnPaiAddProduto.getAttribute("data-price")
-      
+
     ).toFixed(2);
     addiItemCarrinho(name, valor);
   }
@@ -173,16 +182,16 @@ function addProdutoMeuCarrinho() {
 /* Fechar e abrir modal dos produtos selecionados */
 function abrir() {
   modalProdutosSelecionado.style.display = "block"
-  
-}document.querySelector(".container").addEventListener("click" , abrir)
+
+} document.querySelector(".container").addEventListener("click", abrir)
 
 function fechar() {
   modalProdutosSelecionado.style.display = "none"
-}modalCloseProdutos.addEventListener("click" , fechar)
+} modalCloseProdutos.addEventListener("click", fechar)
 
-function fecharClickFora(){
-  modalProdutosSelecionado.style.display  = "none"
-}modalProdutosSelecionado.addEventListener("click" , fecharClickFora)
+function fecharClickFora() {
+  modalProdutosSelecionado.style.display = "none"
+} modalProdutosSelecionado.addEventListener("click", fecharClickFora)
 
 /* Funcao que pega qual elemento foi clicado e adiciona a modal de produtos selecionado */
 
@@ -193,10 +202,10 @@ function selecionarProduto(event) {
     const name = pegarProdutoClicado.querySelector(".descricao").textContent;
 
     const valorString = pegarProdutoClicado.querySelector(".valor").textContent;
-    
-    const valor = parseFloat(valorString.replace("," , "."))
 
-    console.log(name, "R$" + valor.toFixed(2)); 
+    const valor = parseFloat(valorString.replace(",", "."))
+
+    console.log(name, "R$" + valor.toFixed(2));
   }
 }
 

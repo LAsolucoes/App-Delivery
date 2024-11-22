@@ -15,6 +15,13 @@ const modalMenuHorario = document.querySelector("#modal-menu-horarios");
 const modalMenuPagamentos = document.querySelector("#modal-menu-pagamentos")
 
 
+
+
+
+const modalProdutosSelecionado = document.querySelector("#modal-produtos")
+const modalCloseProdutos = document.querySelector("#modal-close-produtos")
+const produtoSelecionado = document.querySelector(".container")
+
 let carrinho = [];
 
 /* Função de Abrir e fechar Modal menu Bars */
@@ -104,11 +111,14 @@ function addPegarIntemClicado(event) {
     const name = btnPaiAddProduto.getAttribute("data-name");
     const valor = parseFloat(
       btnPaiAddProduto.getAttribute("data-price")
+      
     ).toFixed(2);
     addiItemCarrinho(name, valor);
   }
 }
 document.querySelector("main").addEventListener("click", addPegarIntemClicado);
+
+
 
 function addiItemCarrinho(name, valor) {
   const verificarQuantidade = carrinho.find((item) => item.name === name);
@@ -123,6 +133,8 @@ function addiItemCarrinho(name, valor) {
   }
   addProdutoMeuCarrinho();
 }
+
+
 
 function addProdutoMeuCarrinho() {
   updateItens.innerHTML = "";
@@ -156,3 +168,38 @@ function addProdutoMeuCarrinho() {
     }
   });
 }
+
+
+/* Fechar e abrir modal dos produtos selecionados */
+function abrir() {
+  modalProdutosSelecionado.style.display = "block"
+  
+}document.querySelector(".container").addEventListener("click" , abrir)
+
+function fechar() {
+  modalProdutosSelecionado.style.display = "none"
+}modalCloseProdutos.addEventListener("click" , fechar)
+
+function fecharClickFora(){
+  modalProdutosSelecionado.style.display  = "none"
+}modalProdutosSelecionado.addEventListener("click" , fecharClickFora)
+
+/* Funcao que pega qual elemento foi clicado e adiciona a modal de produtos selecionado */
+
+function selecionarProduto(event) {
+  const pegarProdutoClicado = event.target.closest(".container");
+
+  if (pegarProdutoClicado) {
+    const name = pegarProdutoClicado.querySelector(".descricao").textContent;
+
+    const valorString = pegarProdutoClicado.querySelector(".valor").textContent;
+    
+    const valor = parseFloat(valorString.replace("," , "."))
+
+    console.log(name, "R$" + valor.toFixed(2)); 
+  }
+}
+
+document.querySelector("main").addEventListener("click", selecionarProduto);
+
+

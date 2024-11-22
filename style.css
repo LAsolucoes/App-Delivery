@@ -300,6 +300,11 @@ main .modal-produtos-descricao {
   width: 100vw;
 }
 
+.title-modal-produtos-add{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 main .modal-produtos-descricao h1{
   font-size: 1.5rem;
 }
@@ -310,18 +315,19 @@ main .modal-produtos-descricao .btn-alterar-qtd{
   bottom: 10px;
   display: flex;
   justify-content: space-between;
-  border: 1px solid red;
   align-items: center;
   width: 90%;
 }
 
 main .modal-produtos-descricao .btn-add-remove-qtd{
-  border: 1px solid gray;
+  border: none;
   background-color: rgba(128, 128, 128, 0.432);
   width: 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-radius: 2px;
+ 
 }
 
 main .modal-produtos-descricao .btn-add-remove-qtd button{
@@ -329,6 +335,7 @@ main .modal-produtos-descricao .btn-add-remove-qtd button{
   background-color: transparent;
   border: none;
   font-size: 1rem;
+  cursor: pointer;
 }
 
 
@@ -341,6 +348,7 @@ main .modal-produtos-descricao .btn-alterar-qtd .btn-add {
   border-radius: 5px;
   display: flex;
   gap: 50%;
+  cursor: pointer;
 }
 
 

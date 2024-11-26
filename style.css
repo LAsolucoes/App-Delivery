@@ -355,13 +355,11 @@ main .modal-produtos-descricao h1 {
 }
 
 
-main .modal-produtos-descricao .btn-acoes {
-  position: absolute;
-  bottom: 10px;
+main .modal-produtos-descricao .btn-add {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  width: 90%;
+  text-align: center;
 }
 
 main .btn-add-remove-qtd {
@@ -382,17 +380,36 @@ main .btn-add-remove-qtd button {
   cursor: pointer;
 }
 
+main input.qtd{
+  width: 50px;
+  border: none;
+  background-color: rgba(128, 128, 128, 0);
+  color: black;
+  font-size: 0.8rem;
+  text-align: center;
+}
 
-main .modal-produtos-descricao .btn-acoes .btn-add {
+main .modal-produtos-descricao .btn-acoes {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+ 
+}
+
+main .modal-produtos-descricao .btn-acoes button{
   padding: 8px 10px;
-  width: 250px;
+  width: 100%;
   background-color: black;
   color: white;
   border: none;
   border-radius: 5px;
-  display: flex;
-  gap: 50%;
   cursor: pointer;
+  margin-top: 5px;
+
+}
+
+main .modal-produtos-descricao .btn-acoes button.btn-voltar-menu{
+  background-color: red;
 }
 
 
@@ -535,6 +552,7 @@ main .modal-produtos-descricao .btn-acoes .btn-add {
 }
 
 footer {
+  display: none;
   position: fixed;
   bottom: 0;
   background-color: black;

@@ -172,11 +172,11 @@
                 <div class="container">
                     <div class="content">
                         <div>
-                            <img src="img01.png" alt="">
+                            <img src="img01.png" alt="" id="img-produto">
                         </div>
                         <div class="content-descricao">
                             <p class="descricao">X-BURGUER</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                            <p class="obs-produto">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                             <div class="footer-content">
                                 <p class="valor">18,00</p>
                                 <button type="button" data-name="X-BURGUER" data-price="18,00"
@@ -185,6 +185,7 @@
                         </div>
                     </div>
                 </div>
+              
                 <div class="container">
                     <div class="content">
                         <div>
@@ -333,7 +334,7 @@
                 <div class="modal-produtos" id="modal-produtos">
                     <div class="modal-produto-selecionado">
                         <div class="modal-produtos-img">
-                            <img src="COCA-COLA 350ML.png" alt="">
+                            <img src="images.png" alt="" id="img-produto-modal">
                         </div>
                         <hr>
                         <div class="modal-produtos-descricao">
@@ -342,50 +343,49 @@
                                 <i class="fa-solid fa-close" id="modal-close-produtos"></i>
                             </div>
                             <div class="descricao-produtos-add">
-                                <p class="descricao">Coca Cola 350ml</p>
-                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
+
+
+                                <hr>
+
+                                <div class="adicionais" style="display: flex; flex-direction: column;">
+                                    <h1>Adicionais</h1>
+
+                                    <div><input type="checkbox" name="" id="">Gelo <span>3,00</span></div>
+
+                                    <div><input type="checkbox" name="" id="">limão <span>1,00</span></div>
+                                    <div><input type="checkbox" name="" id="">Copos <span>0,50</span></div>
+                                    <div><input type="checkbox" name="" id="">Canudo <span>0,25</span></div>
+
+
+                                </div>
+
+                                <hr>
+                                <div>
+                                    <h4>Observação:</h4>
+                                    <textarea name="" id="" cols="45" rows="6"></textarea>
+
+                                </div>
+
+
+
+
+
+
                             </div>
-
-                            <div>
-                                <p class="valor">R$ 5,00</p>
+                            <div class="btn-add">
+                                <div class="btn-add-remove-qtd">
+                                    <button class="reducao" id="reducao"> - </button>
+                                    <input type="text" id="qtd" class="qtd" value="1">
+                                    <button class="incremento" id="incremento"> + </button>
+                                </div>
                             </div>
-
-                            <hr>
-
-                            <div class="adicionais" style="display: flex; flex-direction: column;">
-                                <h1>Adicionais</h1>
-
-                                <div><input type="checkbox" name="" id="">Gelo <span>3,00</span></div>
-
-                                <div><input type="checkbox" name="" id="">limão <span>1,00</span></div>
-                                <div><input type="checkbox" name="" id="">Copos <span>0,50</span></div>
-                                <div><input type="checkbox" name="" id="">Canudo <span>0,25</span></div>
-
-
-                            </div>
-
-                            <hr>
-                            <div>
-                                <h4>Observação:</h4>
-                                <textarea name="" id="" cols="45" rows="6"></textarea>
-
-                            </div>
-
-
-
-
-
-
-                        </div>
-                        <div class="btn-acoes">
-                            <div class="btn-add-remove-qtd">
-                                <button class="reducao" id="reducao"> - </button>
-                                <span>100</span>
-                                <button class="incremento" id="incremento"> + </button>
-                            </div>
-
-                            <div>
-                                <button class="btn-add">Adicionar <span>R$ 5,00</span></button>
+                            <div class="btn-acoes">
+                                <div>
+                                    <button class="btn-add-sacola">Adicionar <span>R$ 5,00</span></button>
+                                </div>
+                                <div>
+                                    <button class="btn-voltar-menu"> Voltar ao Menu </button>
+                                </div>
                             </div>
 
 
@@ -393,32 +393,29 @@
 
 
                     </div>
-
-
-                </div>
-                <div class="modal-background" id="modal-background">
-                    <div class="modal">
-                        <div>
-                            <h1>Meu Carrinho</h1>
-                        </div>
-                        <div class="content-itens">
-                            <!-- Conteudo dinamico aqui -->
-                        </div>
-                        <div>
-                            <p class="subtotal" id="subtotal">Total: R$ 0,00</p>
-                        </div>
-                        <div>
-                            <p>Endereço:</p>
-                            <input type="text" placeholder="Digite seu endereço completo...">
-                        </div>
-                        <div class="btn-acoes">
-                            <button type="button" class="btn-fechar" id="btn-fechar">Fechar</button>
-                            <button type="button" class="btn-finalizar" id="btn-finalizar">Finalizar Pedido</button>
+                    <div class="modal-background" id="modal-background">
+                        <div class="modal">
+                            <div>
+                                <h1>Meu Carrinho</h1>
+                            </div>
+                            <div class="content-itens">
+                                <!-- Conteudo dinamico aqui -->
+                            </div>
+                            <div>
+                                <p class="subtotal" id="subtotal">Total: R$ 0,00</p>
+                            </div>
+                            <div>
+                                <p>Endereço:</p>
+                                <input type="text" placeholder="Digite seu endereço completo...">
+                            </div>
+                            <div class="btn-acoes">
+                                <button type="button" class="btn-fechar" id="btn-fechar">Fechar</button>
+                                <button type="button" class="btn-finalizar" id="btn-finalizar">Finalizar Pedido</button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
     </main>
 
     <footer class="rodape" id="rodape">
